@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices.JavaScript;
-
-namespace BlazorMonacoEditor.TypeDefinitions;
+﻿namespace BlazorMonacoEditor.TypeDefinitions;
 
 public class WeatherReport
 {

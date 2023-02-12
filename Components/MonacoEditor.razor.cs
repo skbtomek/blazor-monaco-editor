@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
-namespace BlazorMonacoEditor.MonacoEditor;
+namespace BlazorMonacoEditor.Components;
 
 public sealed partial class MonacoEditor : IAsyncDisposable
 {
@@ -41,7 +41,7 @@ public sealed partial class MonacoEditor : IAsyncDisposable
         if (firstRender)
         {
             _jsModule = await JSRuntime.InvokeAsync<IJSObjectReference>(
-                "import", "./MonacoEditor/MonacoEditor.razor.js");
+                "import", "./Components/MonacoEditor.razor.js");
 
             _jsComponent = await _jsModule.InvokeAsync<IJSObjectReference>(
                 "initialize", _hostDomElement, _blazorComponent, Value, _typescriptDefinitions);
