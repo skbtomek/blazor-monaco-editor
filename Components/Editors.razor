@@ -1,0 +1,26 @@
+@using BlazorMonacoEditor.MonacoEditor;
+
+<div class="editor-pair">
+    <h3>Editors #1</h3>
+    <h5>Textarea (two way binding, update <em>oninput</em> event)</h5>
+    <div class="editor">
+        <textarea @bind="Editor1Value" @bind:event="oninput"></textarea>
+    </div>
+    <h5>Monaco</h5>
+    <div class="editor">
+        <MonacoEditor @bind-Value="Editor1Value"/>
+    </div>
+</div>
+
+
+<div class="editor-pair">
+    <h3>Editors #2</h3>
+    <h5>Textarea (two way binding, update <em>onblur</em> event)</h5>
+    <div class="editor">
+        <textarea @bind="Editor2Value"></textarea>
+    </div>
+    <h5>Monaco</h5>
+    <div class="editor">
+        <MonacoEditor @bind-Value="Editor2Value"/>
+    </div>
+</div>

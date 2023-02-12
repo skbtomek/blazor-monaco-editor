@@ -1,6 +1,5 @@
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 using BlazorMonacoEditor.Data;
+using BlazorMonacoEditor.TypeDefinitions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+
+builder.Services.AddSingleton<ITypescriptDefinitions, WeatherReportDefinitions>();
 
 var app = builder.Build();
 
