@@ -52,3 +52,5 @@
 
 # Demo
 
+https://blazor-monaco-editor.azurewebsites.net
+
