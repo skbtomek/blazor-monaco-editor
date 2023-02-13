@@ -4,6 +4,8 @@
 - Wraps [monaco-editor](https://microsoft.github.io/monaco-editor/) JavaScript library
 - Implements two-way binding
 - Imports extra JS library, that consists of typescript definitions generated from .NET/C# types
+    - Imported definitions can contain one type or the whole tree
+    - Provides autocompletion, intellisense, syntax/types validation and other features natively supported by monaco-editor  
 
 ### Usage:
 ``` html
@@ -18,10 +20,12 @@
 ### Configure Monaco editor:
 - Directly in component JS file: [MonacoEditor.razor.js](Components/MonacoEditor.razor.js)
 
-### Generate Typescript definitions from .NET/C# types
-- NJsonSchema library creates JsonSchema from .NET types
-- Based on that, typescript definitions are generated with `TypeScriptGenerator` 
+### Configure autocompletion with syntax/types validation for .NET types 
 - Example: [WeatherReportDefinitions](TypeDefinitions/WeatherReportDefinitions.cs)
+- Typescript definitions are generated with:
+   - NJsonSchema library that creates JsonSchema from .NET types
+   - Then from JsonSchema, typescript definitions are generated with `TypeScriptGenerator`
+- monaco-editor treats those types as imported js library
 
 # How you can use it in your Blazor project
 1. Install monaco-editor npm package
