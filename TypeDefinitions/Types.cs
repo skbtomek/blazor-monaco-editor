@@ -5,6 +5,7 @@ public class WeatherReport
     public string Title { get; set; } = null!;
     public DateTime PublicationDate { get; set; }
     public ReportType Type { get; set; }
+    public Measurements Measurements { get; set; } = null!;
 }
 
 public enum ReportType
@@ -15,7 +16,7 @@ public enum ReportType
     Monthly
 }
 
-public class Condition {
+public class Measurements {
     public int? TemperatureC { get; set; }
     public int? TemperatureF { get; set; }
     public WindSpeed WindSpeed { get; set; } = null!;

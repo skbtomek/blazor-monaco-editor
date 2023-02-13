@@ -1,10 +1,8 @@
-.editor-pair {
-    margin-top: 12px;
-}
 
 .editor {
-    height: 100px;
-    width: 600px
+    height: 150px;
+    width: 600px;
+    margin-bottom: 12px;
 }
 
 .editor textarea {

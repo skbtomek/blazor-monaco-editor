@@ -1,0 +1,9 @@
+.page {
+    display: flex;
+    gap: 18px;
+}
+
+.editors, .custom-types {
+    display: flex;
+    flex-direction: column;
+}
