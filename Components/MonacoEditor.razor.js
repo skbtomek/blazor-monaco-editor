@@ -11,10 +11,6 @@ export function initialize(hostElementDOM, blazorEditorComponent, value, typescr
         language: 'typescript',
         automaticLayout: true,
         value: value,
-        lineNumbers: 'off',
-        folding: false,
-        glyphMargin: false,
-        lineDecorationsWidth: 1,
         minimap: {enabled: false}
     });
 
